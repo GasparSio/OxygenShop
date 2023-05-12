@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+$red-color: #FB3B64;
+$text-color: #000000;
+$blue-color: #08A6E4;
+$button-color-letter: #FFFFFF;
+$background-color-header: #FFFFFF;
+$background-color-green: #55DFB4;
+$background-color-card: #F7F7F7;
+$raleway-font: Raleway;
+$opensans-font: "Open Sans";
+$weight-300: 300;
+$weight-400: 400;
+$weight-700: 700;
+
+ body {
+    min-width: 320px;
+    
+ }
+//HEADER
+ .header-section{
+     width: 100%;
+     height: 70px;
+     padding: 15px;
+     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+}
+.header-section__title{
+    display: inline-block;
+    h1{
+        color: $blue-color;
+        font-family: $raleway-font;
+        font-weight: $weight-400;
+        font-size: 32px;
+    }
+}
+.header-section__icon{
+    display: inline-block;
+}
+
+//MAIN
+main{
+    background-color: $background-color-card;
+}
+.main-sell{
+    display: block;
+    text-align: center;
+    background-color: $background-color-header;
+    h1{
+        font: {
+            family: $raleway-font;
+            weight: $weight-400;
+            size: 35px;
+        }
+        color: $text-color;
+        margin-top: 90px;
+        line-height: 41.09px;
+    }
+    p{
+        font: {
+            family: $opensans-font;
+            weight: $weight-400;
+            size: 16px;
+        }
+        min-width: 290px;
+        margin-top: 20px;
+        line-height: 23px;
+    }
+    .main-sell__button{
+        font : {
+            family: $opensans-font;
+            weight: $weight-700;
+            size: 16px;
+        }
+        min-width: 290px;
+        margin-top: 40px;
+        color: $button-color-letter;
+        background-color: $blue-color;
+        box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+        border-radius: 40px;
+        height: 67px;
+        border: none;
+    }
+}
+.laptop-img{
+    background-color: $background-color-header;
+}
+.laptop-img img{
+    max-width: 100%;
+    max-height: 594px;
+    margin-top: 60px;
+}
+
+//STADISTICS
+.main-stadistics{
+    background-color: $background-color-header;
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    h1{
+        font: {
+            family: $raleway-font;
+            weight: $weight-300;
+            size: 30px;
+        }
+        line-height: 35px;
+        padding: 20px 20px;
+    }
+    img{
+        margin: 10px;
+        max-width: 50%;
+    }
+}
+.card-container{
+    text-align: center;
+    background-color: $background-color-card;
+    
+    .card-container__card{
+        padding: 8px;
+        width: 85%;
+        background-color: $background-color-header;
+        border: 1px solid #E8E9ED;
+        border-radius: 5px;
+        
+        h1{
+            font : {
+                family: $raleway-font;
+                weight: $weight-400;
+                size: 30px;
+            }
+            line-height: 35.22px;
+            margin-top: 10px;
+            text-align: start;
+        }
+        p{
+            font : {
+                family: $opensans-font;
+                weight: $weight-400;
+                size: 14px;
+            }
+            line-height: 21px;
+            margin-top: 25px;
+            text-align: start;
+        }
+        
+    }
+}
+.card-1, 
+.card-2{
+    margin: 25px auto;
+        }
+.card-3{
+    margin: 0 auto;
+}
+.container-last-card-green{
+    text-align: center;
+    background-color: $background-color-card;
+    .container-last-card__green{
+    padding: 8px;
+    margin: 0 auto;
+    width: 85%;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    background-color: $background-color-green;
+    }
+    img{
+        text-align: center;
+        width: 85%;
+    }
+}
+
+//PRICES CONTAINER
+.prices-container{
+    text-align: center;
+    background-color: $background-color-header;
+    margin: 30px auto;
+    h1{
+        font: {
+            family: $raleway-font;
+            weight: $weight-400;
+            size: 36px;
+        }
+        color: $text-color;
+        line-height: 42.26px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+}
+}
+.prices-container__card1{
+    height: 250px;
+    width: 85%;
+    background: $background-color-header;
+    border: 1px solid $red-color;
+    border-radius: 18px;
+    margin: 0 auto;
+    display: inline-block;
+}
+.info-detail{
+    display: inline-block;
+    width: 50%;
+    margin-top: 20px;
+    span{
+        display: block;
+        text-align: start;
+        padding-bottom: 20px;
+        font: {
+            family: $opensans-font;
+            weight: $weight-400;
+            size: 14px;
+    }
+    line-height: 19.07px;
+    color: $text-color;
+    }
+}
+.price-detail{
+    vertical-align: middle;
+    width: 40%;
+    height: 100%;
+    display: inline-block;
+    h2{
+        font: {
+            family: $raleway-font;
+            weight: $weight-700;
+            size: 20px;
+    }
+    line-height: 24px;
+    color: $text-color;
+    
+}
+    span{
+        font: {
+            family: $opensans-font;
+            weight: $weight-300;
+            size: 46px;
+    }
+    line-height: 64px;
+    color: $red-color;
+    }
+}
+.card-button{
+    margin-top: -60px;
+    color: $button-color-letter;
+    width: 150px;
+    height: 50px;
+    border-radius: 23px;
+    border: none;
+    font: {
+        family: $opensans-font;
+        weight: $weight-700;
+        size: 13px;
+    }
+    line-height: 17.7px;
+}
+.card-button-1{
+    background: $red-color;
+}
+.card-button-2{
+    background: #07ACE6;
+}
+.card-button-3{
+    background: #55DFB4;
+}
+
+.prices-container__card2{
+    height: 290px;
+    width: 95%;
+    background: $background-color-header;
+    border: 1px solid #07ACE6;
+    box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+    border-radius: 18px;
+    margin: 0 auto;
+    display: inline-block;
+}
+.info-detail2{
+    display: inline-block;
+    width: 50%;
+    margin-top: 20px;
+    span{
+        display: block;
+        text-align: start;
+        padding-bottom: 20px;
+        font: {
+            family: $opensans-font;
+            weight: $weight-400;
+            size: 14px;
+    }
+    line-height: 19.07px;
+    color: $text-color;
+    }
+}
+.price-detail2{
+    vertical-align: middle;
+    width: 45%;
+    height: 100%;
+    display: inline-block;
+    h2{
+        font: {
+            family: $raleway-font;
+            weight: $weight-700;
+            size: 20px;
+    }
+    line-height: 24px;
+    color: $text-color;
+    
+}
+    .price-detail2__number{
+        font: {
+            family: $opensans-font;
+            weight: $weight-300;
+            size: 46px;
+    }
+    line-height: 62px;
+    color: #07ACE6;
+    display: block;
+    }
+    .price-detail2__offer{
+        font: {
+            family: $raleway-font;
+            weight: $weight-700;
+            size: 12px;
+    }
+    line-height: 14.09px;
+    color: $text-color;
+    display: block;
+    }
+}
+
+.prices-container__card3{
+    height: 250px;
+    width: 85%;
+    background: $background-color-header;
+    border: 1px solid #55DFB4;
+    border-radius: 18px;
+    margin: 0 auto;
+    display: inline-block;
+}
+.info-detail3{
+    display: inline-block;
+    width: 50%;
+    margin-top: 20px;
+    span{
+        display: block;
+        text-align: start;
+        padding-bottom: 20px;
+        font: {
+            family: $opensans-font;
+            weight: $weight-400;
+            size: 14px;
+    }
+    line-height: 19.07px;
+    color: $text-color;
+    }
+}
+.price-detail3{
+    vertical-align: middle;
+    width: 45%;
+    height: 100%;
+    display: inline-block;
+    h2{
+        font: {
+            family: $raleway-font;
+            weight: $weight-700;
+            size: 20px;
+    }
+    line-height: 24px;
+    color: $text-color;
+    
+}
+    .price-detail3__number{
+        font: {
+            family: $opensans-font;
+            weight: $weight-300;
+            size: 46px;
+    }
+    line-height: 62px;
+    color: #55DFB4;
+    display: block;
+    }
+    .price-detail3__offer{
+        font: {
+            family: $raleway-font;
+            weight: $weight-700;
+            size: 12px;
+    }
+    line-height: 14.09px;
+    color: $text-color;
+    display: block;
+    }
+}

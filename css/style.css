@@ -1,0 +1,353 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+.header-section {
+  width: 100%;
+  height: 70px;
+  padding: 15px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+}
+
+.header-section__title {
+  display: inline-block;
+}
+.header-section__title h1 {
+  color: #08A6E4;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.header-section__icon {
+  display: inline-block;
+}
+
+main {
+  background-color: #F7F7F7;
+}
+
+.main-sell {
+  display: block;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+.main-sell h1 {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 35px;
+  color: #000000;
+  margin-top: 90px;
+  line-height: 41.09px;
+}
+.main-sell p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  min-width: 290px;
+  margin-top: 20px;
+  line-height: 23px;
+}
+.main-sell .main-sell__button {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 16px;
+  min-width: 290px;
+  margin-top: 40px;
+  color: #FFFFFF;
+  background-color: #08A6E4;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  border-radius: 40px;
+  height: 67px;
+  border: none;
+}
+
+.laptop-img {
+  background-color: #FFFFFF;
+}
+
+.laptop-img img {
+  max-width: 100%;
+  max-height: 594px;
+  margin-top: 60px;
+}
+
+.main-stadistics {
+  background-color: #FFFFFF;
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+.main-stadistics h1 {
+  font-family: Raleway;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  padding: 20px 20px;
+}
+.main-stadistics img {
+  margin: 10px;
+  max-width: 50%;
+}
+
+.card-container {
+  text-align: center;
+  background-color: #F7F7F7;
+}
+.card-container .card-container__card {
+  padding: 8px;
+  width: 85%;
+  background-color: #FFFFFF;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+}
+.card-container .card-container__card h1 {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35.22px;
+  margin-top: 10px;
+  text-align: start;
+}
+.card-container .card-container__card p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 25px;
+  text-align: start;
+}
+
+.card-1,
+.card-2 {
+  margin: 25px auto;
+}
+
+.card-3 {
+  margin: 0 auto;
+}
+
+.container-last-card-green {
+  text-align: center;
+  background-color: #F7F7F7;
+}
+.container-last-card-green .container-last-card__green {
+  padding: 8px;
+  margin: 0 auto;
+  width: 85%;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  background-color: #55DFB4;
+}
+.container-last-card-green img {
+  text-align: center;
+  width: 85%;
+}
+
+.prices-container {
+  text-align: center;
+  background-color: #FFFFFF;
+  margin: 30px auto;
+}
+.prices-container h1 {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 36px;
+  color: #000000;
+  line-height: 42.26px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.prices-container__card1 {
+  height: 250px;
+  width: 85%;
+  background: #FFFFFF;
+  border: 1px solid #FB3B64;
+  border-radius: 18px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.info-detail {
+  display: inline-block;
+  width: 50%;
+  margin-top: 20px;
+}
+.info-detail span {
+  display: block;
+  text-align: start;
+  padding-bottom: 20px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19.07px;
+  color: #000000;
+}
+
+.price-detail {
+  vertical-align: middle;
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+}
+.price-detail h2 {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.price-detail span {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 46px;
+  line-height: 64px;
+  color: #FB3B64;
+}
+
+.card-button {
+  margin-top: -60px;
+  color: #FFFFFF;
+  width: 150px;
+  height: 50px;
+  border-radius: 23px;
+  border: none;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 17.7px;
+}
+
+.card-button-1 {
+  background: #FB3B64;
+}
+
+.card-button-2 {
+  background: #07ACE6;
+}
+
+.card-button-3 {
+  background: #55DFB4;
+}
+
+.prices-container__card2 {
+  height: 290px;
+  width: 95%;
+  background: #FFFFFF;
+  border: 1px solid #07ACE6;
+  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+  border-radius: 18px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.info-detail2 {
+  display: inline-block;
+  width: 50%;
+  margin-top: 20px;
+}
+.info-detail2 span {
+  display: block;
+  text-align: start;
+  padding-bottom: 20px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19.07px;
+  color: #000000;
+}
+
+.price-detail2 {
+  vertical-align: middle;
+  width: 45%;
+  height: 100%;
+  display: inline-block;
+}
+.price-detail2 h2 {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.price-detail2 .price-detail2__number {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 46px;
+  line-height: 62px;
+  color: #07ACE6;
+  display: block;
+}
+.price-detail2 .price-detail2__offer {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14.09px;
+  color: #000000;
+  display: block;
+}
+
+.prices-container__card3 {
+  height: 250px;
+  width: 85%;
+  background: #FFFFFF;
+  border: 1px solid #55DFB4;
+  border-radius: 18px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.info-detail3 {
+  display: inline-block;
+  width: 50%;
+  margin-top: 20px;
+}
+.info-detail3 span {
+  display: block;
+  text-align: start;
+  padding-bottom: 20px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19.07px;
+  color: #000000;
+}
+
+.price-detail3 {
+  vertical-align: middle;
+  width: 45%;
+  height: 100%;
+  display: inline-block;
+}
+.price-detail3 h2 {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.price-detail3 .price-detail3__number {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 46px;
+  line-height: 62px;
+  color: #55DFB4;
+  display: block;
+}
+.price-detail3 .price-detail3__offer {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14.09px;
+  color: #000000;
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
