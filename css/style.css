@@ -17,16 +17,39 @@ body {
 
 .header-section__title {
   display: inline-block;
+  width: 48%;
 }
-.header-section__title h1 {
+.header-section__title span {
   color: #08A6E4;
   font-family: Raleway;
   font-weight: 400;
   font-size: 32px;
 }
 
+.section-why {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 11px;
+  color: #000000;
+  line-height: 15px;
+  letter-spacing: 3.28px;
+}
+
+.section-benefits,
+.section-prices,
+.section-contact {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 11px;
+  color: #A5A5A5;
+  line-height: 15px;
+  letter-spacing: 3.28px;
+}
+
 .header-section__icon {
   display: inline-block;
+  width: 44%;
+  text-align: end;
 }
 
 main {
@@ -81,7 +104,7 @@ main {
 .main-stadistics {
   background-color: #FFFFFF;
   display: block;
-  margin-top: 15px;
+  margin-top: 0;
   text-align: center;
 }
 .main-stadistics h1 {
@@ -93,7 +116,11 @@ main {
 }
 .main-stadistics img {
   margin: 10px;
-  max-width: 50%;
+  max-width: 75%;
+  max-height: 155px;
+}
+.main-stadistics .icon-red {
+  padding-left: 4px;
 }
 
 .card-container {
@@ -148,12 +175,13 @@ main {
 .container-last-card-green img {
   text-align: center;
   width: 85%;
+  max-height: 250px;
 }
 
 .prices-container {
   text-align: center;
   background-color: #FFFFFF;
-  margin: 30px auto;
+  margin: 30px auto 0;
 }
 .prices-container h1 {
   font-family: Raleway;
@@ -177,7 +205,7 @@ main {
 
 .info-detail {
   display: inline-block;
-  width: 50%;
+  width: 40%;
   margin-top: 20px;
 }
 .info-detail span {
@@ -213,7 +241,7 @@ main {
 }
 
 .card-button {
-  margin-top: -60px;
+  margin-top: -50px;
   color: #FFFFFF;
   width: 150px;
   height: 50px;
@@ -239,18 +267,18 @@ main {
 
 .prices-container__card2 {
   height: 290px;
-  width: 95%;
+  width: 90%;
   background: #FFFFFF;
   border: 1px solid #07ACE6;
   box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
   border-radius: 18px;
-  margin: 0 auto;
+  margin: 25px auto 0;
   display: inline-block;
 }
 
 .info-detail2 {
   display: inline-block;
-  width: 50%;
+  width: 40%;
   margin-top: 20px;
 }
 .info-detail2 span {
@@ -266,7 +294,7 @@ main {
 
 .price-detail2 {
   vertical-align: middle;
-  width: 45%;
+  width: 40%;
   height: 100%;
   display: inline-block;
 }
@@ -300,13 +328,13 @@ main {
   background: #FFFFFF;
   border: 1px solid #55DFB4;
   border-radius: 18px;
-  margin: 0 auto;
+  margin: 25px auto 0;
   display: inline-block;
 }
 
 .info-detail3 {
   display: inline-block;
-  width: 50%;
+  width: 40%;
   margin-top: 20px;
 }
 .info-detail3 span {
@@ -322,7 +350,7 @@ main {
 
 .price-detail3 {
   vertical-align: middle;
-  width: 45%;
+  width: 40%;
   height: 100%;
   display: inline-block;
 }
@@ -348,6 +376,307 @@ main {
   line-height: 14.09px;
   color: #000000;
   display: block;
+}
+
+.form-container {
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.form-container__contact {
+  display: block;
+  margin-bottom: 40px;
+  text-align: start;
+  margin-left: 25px;
+}
+.form-container__contact h1 {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46.96px;
+  color: #000000;
+  padding-top: 35px;
+}
+.form-container__contact h3 {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+.form-container__contact span {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 6px;
+  margin-bottom: 9px;
+  display: block;
+  line-height: 22px;
+  color: #A5A5A5;
+}
+.form-container__contact span img {
+  width: 15px;
+}
+
+.form-container__personal-info {
+  text-align: start;
+}
+.form-container__personal-info label {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 11px;
+  color: #08A6E4;
+  line-height: 14.98px;
+  margin-top: 60px;
+  letter-spacing: 3.28px;
+}
+.form-container__personal-info input {
+  width: 280px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #95989A;
+}
+
+.info-name {
+  margin-left: 25px;
+}
+
+.consent-container {
+  margin-top: 15px;
+}
+
+.consent-container__check {
+  display: inline-block;
+  vertical-align: top;
+}
+.consent-container__check input {
+  width: 20px;
+  margin-left: 20px;
+}
+
+.consent-container__text {
+  max-width: 250px;
+  display: inline-block;
+  margin-left: 3px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 12px;
+  color: #707070;
+  line-height: 16.34px;
+}
+
+.consent-container__button {
+  margin-left: 45px;
+}
+
+.send-button {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  min-width: 226px;
+  margin-top: 40px;
+  margin-bottom: 35px;
+  color: #FFFFFF;
+  background-color: #08A6E4;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  border-radius: 40px;
+  height: 57px;
+  border: none;
+}
+
+.footer-container {
+  width: 100%;
+  height: 89px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #F7F7F7;
+  box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
+}
+
+.footer-container__rights {
+  display: inline-block;
+  width: 65%;
+  text-align: start;
+  margin-left: 3px;
+}
+
+.footer-title {
+  display: block;
+  color: #08A6E4;
+  font-family: Raleway;
+  font-weight: 300;
+  font-size: 26px;
+  text-align: start;
+  margin-left: 3px;
+}
+
+.footer-rights {
+  display: block;
+  color: #A5A5A5;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.footer-container__media {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+}
+.footer-container__media .footer-twitter {
+  margin-right: 12px;
+}
+
+.inactive {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  .header-section__container {
+    position: relative;
+    display: flex;
+  }
+  .header-section__icon {
+    display: none;
+    position: absolute;
+  }
+  .header-section__title {
+    display: flex;
+    width: 45%;
+    order: 1;
+    padding-left: 60px;
+    justify-content: start;
+    align-items: center;
+  }
+  .header-section__subtitles {
+    display: flex;
+    width: 45%;
+    order: 2;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-why {
+    display: flex;
+  }
+  .section-benefits {
+    display: flex;
+  }
+  .section-prices {
+    display: flex;
+  }
+  .section-contact {
+    display: flex;
+  }
+  .main-stadistics {
+    display: flexbox;
+    margin-top: 0;
+    justify-content: center;
+  }
+  .main-stadistics__images {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .card-1 {
+    height: 245px;
+    display: flex;
+    align-items: center;
+  }
+  .card-1__img {
+    width: 50%;
+    order: 2;
+  }
+  .card-1__text {
+    width: 40%;
+    order: 1;
+    margin-left: 20px;
+  }
+  .card-1__red-line {
+    display: block;
+    margin: 30px 0;
+  }
+  .card-2 {
+    display: flex;
+    height: 245px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .card-2__img {
+    width: 40%;
+    order: 1;
+  }
+  .card-2__text {
+    width: 40%;
+    order: 2;
+  }
+  .card-2__blue-line {
+    display: block;
+    margin: 30px 0;
+  }
+  .card-container__card-3 {
+    margin: 0 auto;
+    display: flex;
+    width: 85%;
+    height: 245px;
+  }
+  .card-3 {
+    padding-left: 30px;
+    align-items: center;
+  }
+  .container-last-card__green {
+    width: 89%;
+    height: 100%;
+    margin-left: 30px;
+  }
+  .card-3__blue-line {
+    display: block;
+    margin: 30px 0;
+  }
+  .prices-container {
+    display: block;
+  }
+  .prices-container-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  .form-container__contact {
+    width: 40%;
+    text-align: center;
+  }
+  .form-container__personal-info {
+    width: 40%;
+  }
+  .form-container__contact h1 {
+    padding-top: 0;
+  }
+  .form-container__mail-phone {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  .footer-container {
+    display: flex;
+  }
+  .footer-container__rights {
+    width: 48%;
+    padding-left: 15px;
+  }
+  .footer-container__media {
+    width: 48%;
+    padding-right: 35px;
+    text-align: end;
+    align-self: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

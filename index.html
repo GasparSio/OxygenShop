@@ -16,11 +16,19 @@
 <body>
 <!-- HEADER -->
     <header class="header-section">
-        <div class="header-section__title">
-            <h1>OXYGENShop</h1>
-        </div>    
-        <div class="header-section__icon">
-            <img src="./images/icon-menu.jpg" alt="Icon Menu" class=" icon-menu--big">
+        <div class="header-section__container">
+            <div class="header-section__title">
+                <span>OXYGENShop</span>
+            </div>
+            <div class="header-section__icon">
+                <span><img src="./images/icon-menu.jpg" alt="Icon Menu" class=" icon-menu--big"></span>
+            </div>
+            <div class="header-section__subtitles">
+                <h4 class="section-why inactive">Why Us</h4>
+                <h4 class="section-benefits inactive">Benefits</h4>
+                <h4 class="section-prices inactive">Prices</h4>
+                <h4 class="section-contact inactive">Contact</h4>
+            </div>    
         </div>
     </header>
 <!-- /HEADER -->
@@ -38,86 +46,160 @@
             </div>
         </section>
         <section class="main-stadistics">
-            <h1>The most popular sales platform in country</h1>
-            <img src="./images/icon-red.png" alt="icon info stadistics" class="icon-red">
-            <img src="./images/icon-blue.png" alt="icon info stadistics" class="icon-blue">
-            <img src="./images/images/icon-green.png" alt="icon info stadistics" class="icon-green">
+            <div>
+                <h1>The most popular sales platform in country</h1>
+            </div>
+            <div class="main-stadistics__images">
+                <img src="./images/icon-red.png" alt="icon info stadistics" class="icon-red">
+                <img src="./images/icon-blue.png" alt="icon info stadistics" class="icon-blue">
+                <img src="./images/icon-green.png" alt="icon info stadistics" class="icon-green">
+            </div>
         </section>
         <section class="card-container">
             <div class="card-container__card card-1">
-                <img src="./images/Macbook2-card.png" alt="Macbook image">
-                <img src="./images/circle-red-card.png" alt="Circle red" class="img-circle">
-                <h1>Be always first</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <div class="card-1__img">
+                    <img src="./images/Macbook2-card.png" alt="Macbook image">
+                    <img src="./images/circle-red-card.png" alt="Circle red" class="img-circle">
+                </div>
+                <div class="card-1__text">
+                    <h1>Be always first</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <img src="./images/card-red-line.png" alt="red line" class="card-1__red-line inactive">
+                </div>
             </div>
             <div class="card-container__card card-2">
-                <img src="./images/iPhone-card.png" alt="Iphone image">
-                <h1>Your shop is where you are!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <div class="card-2__img">
+                    <img src="./images/iPhone-card.png" alt="Iphone image">
+                </div>
+                <div class="card-2__text">
+                    <h1>Your shop is where you are!</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <img src="./images/card-blue-line.png" alt="blue-line" class="card-2__blue-line inactive">
+                </div>
             </div>
-            <div class="card-container__card card-3">
-                <h1>Increase recognition your brand!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <div class="card-container__card-3">
+                <div class="card-container__card card-3">
+                        <h1>Increase recognition your brand!</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <img src="./images/card-green-line.png" alt="green line" class="card-3__blue-line inactive">
+                </div>
+                <div class="container-last-card-green">
+                    <div class="container-last-card__green"> 
+                        <img src="./images/Trumpet-card.png" alt="Trumpet image">
+                    </div>
+                </div>
             </div>
         </section>
-        <div class="container-last-card-green">
-            <div class="container-last-card__green"> 
-                <img src="./images/Trumpet-card.png" alt="Trumpet image">
-            </div>
-        </div>
 
         <section class="prices-container">
             <h1>Pricing</h1>
-            <div class="prices-container__card1">
-                <div class="price-detail">
-                    <h2>Basic</h2>
-                    <span>$0</span>
+            <div class="prices-container-cards">
+                <div class="prices-container__card1-button">
+                    <div class="prices-container__card1">
+                        <div class="price-detail">
+                            <h2>Basic</h2>
+                            <span>$0</span>
+                        </div>
+                        <div class="info-detail">
+                            <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 100 MB HDD</span>
+                            <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 1 Subdomain</span>
+                            <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 2 E-mails</span>
+                            <span><img src="./images/Cross.png" alt="Checkbox Image"> Two years license</span>
+                            <span><img src="./images/Cross.png" alt="Checkbox Image"> Full support</span>
+                        </div>
+                    </div>
+                    <button class="card-button card-button-1">Begin</button>
                 </div>
-                <div class="info-detail">
-                    <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 100 MB HDD</span>
-                    <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 1 Subdomain</span>
-                    <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 2 E-mails</span>
-                    <span><img src="./images/Cross.png" alt="Checkbox Image"> Two years license</span>
-                    <span><img src="./images/Cross.png" alt="Checkbox Image"> Full support</span>
+                <div class="prices-container__card2-button">
+                    <div class="prices-container__card2">
+                        <div class="price-detail2">
+                            <h2>Professional</h2>
+                            <span class="price-detail2__number">$25</span>
+                            <span class="price-detail2__offer">Limited offer</span>
+                        </div>
+                        <div class="info-detail2">
+                            <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 500 MB HDD</span>
+                            <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 2 Subdomains</span>
+                            <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 5 E-mails</span>
+                            <span><img src="./images/Checkbox.png" alt="Checkbox Image"> One year license</span>
+                            <span><img src="./images/Cross.png" alt="Checkbox Image"> Full support</span>
+                        </div>
+                    </div>
+                    <button class="card-button card-button-2">Begin</button>
+                </div>
+                
+                <div class="prices-container__card2-button">
+                    <div class="prices-container__card3">
+                        <div class="price-detail3">
+                            <h2>Premium</h2>
+                            <span class="price-detail3__number">$60</span>
+                            <span class="price-detail3__offer">Limited offer</span>
+                        </div>
+                        <div class="info-detail3">
+                            <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 2 GB HDD</span>
+                            <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 5 Subdomains</span>
+                            <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 20 E-mails</span>
+                            <span><img src="./images/Checkbox.png" alt="Checkbox Image"> Two years license</span>
+                            <span><img src="./images/Checkbox.png" alt="Checkbox Image"> Full support</span>
+                        </div>
+                    </div>
+                    <button class="card-button card-button-3">Begin</button>
                 </div>
             </div>
-            <button class="card-button card-button-1">Begin</button>
-
-            <div class="prices-container__card2">
-                <div class="price-detail2">
-                    <h2>Professional</h2>
-                    <span class="price-detail2__number">$25</span>
-                    <span class="price-detail2__offer">Limited offer</span>
-                </div>
-                <div class="info-detail2">
-                    <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 500 MB HDD</span>
-                    <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 2 Subdomains</span>
-                    <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 5 E-mails</span>
-                    <span><img src="./images/Checkbox.png" alt="Checkbox Image"> One year license</span>
-                    <span><img src="./images/Cross.png" alt="Checkbox Image"> Full support</span>
-                </div>
-            </div>
-            <button class="card-button card-button-2">Begin</button>
-
-            <div class="prices-container__card3">
-                <div class="price-detail3">
-                    <h2>Premium</h2>
-                    <span class="price-detail3__number">$60</span>
-                    <span class="price-detail3__offer">Limited offer</span>
-                </div>
-                <div class="info-detail3">
-                    <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 2 gB HDD</span>
-                    <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 5 Subdomains</span>
-                    <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 20 E-mails</span>
-                    <span><img src="./images/Checkbox.png" alt="Checkbox Image"> Two years license</span>
-                    <span><img src="./images/Checkbox.png" alt="Checkbox Image"> Full support</span>
-                </div>
-            </div>
-            <button class="card-button card-button-3">Begin</button>
         </section>
         
+        <section class="form-container">
+            <div class="form-container__contact">
+                <h1>Any questions?</h1>
+                <h3>Leave your email address or call us!</h3>
+                <div class="form-container__mail-phone">
+                    <span><img src="./images/mail-img.png" alt="Mail image">info@bestshop.xyz</span>
+                    <span><img src="./images/phone-img.png" alt="Phone image">123 456 789</span>
+                </div>
+            </div>
+            <div class="form-container__personal-info">
+                <form action="/index.html" method="POST">
+                    <div class="info-name">
+                    <label for="name">NAME</label>
+                    <br>
+                    <input type="text" name="name" id="name">
+                    <br>
+                    <label for="email">EMAIL</label>
+                    <br>
+                    <input type="text" name="email" id="email">
+                    <br>
+                    </div>
+                    
+                    <div class="consent-container">
+                        <div class="consent-container__check">
+                            <label for="consent"></label>
+                            <input id="consent" name="checkbox" type="checkbox" value="consent">
+                        </div>
+                        <div class="consent-container__text">
+                            <p>I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p>
+                        </div>
+                    </div>
+                  </form>
+                  <div class="consent-container__button">
+                      <button class="send-button">Send</button>
+                  </div>
+            </div>
+        </section>
     </main>
 <!-- /MAIN -->
+
+<!-- FOTTER -->
+    <footer class="footer-container">
+            <div class="footer-container__rights">
+                <span class="footer-title">OXYGENShop</span>
+                <span class="footer-rights">© 2022 OXYGEN, All Rights Reserved</span>
+            </div>
+            <div class="footer-container__media">
+                <span class="footer-twitter"><img src="./images/Twitter-icon.png" alt="Twitter icon"></span>
+                <span><img src="./images/Facebook-icon.png" alt="Facebook icon"></span>
+            </div>
+    </footer>
+<!-- /FOTTER -->
 
 </body>
 </html>
