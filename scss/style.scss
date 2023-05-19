@@ -117,7 +117,7 @@ main{
     background-color: $background-color-header;
 }
 .laptop-img img{
-    max-width: 100%;
+    width: 100vw;
     max-height: 594px;
     margin-top: 60px;
 }
@@ -204,6 +204,18 @@ main{
         max-height: 250px;
     }
 }
+
+// .card-1__mac-circle{
+//     position: relative;
+// }
+// .macbook-img{
+//     position: absolute;
+//     z-index: 1;
+// }
+// .img-circle{
+//     position: absolute;
+
+// }
 
 //PRICES CONTAINER
 .prices-container{
@@ -698,8 +710,35 @@ main{
     }
     .prices-container-cards{
         display: flex;
+        align-items: baseline;
+        justify-content: space-evenly;
+    }
+    .prices-container__card1{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: auto;
+        width: 325px;
         align-items: center;
-        justify-content: center;
+    }
+    .prices-container__card2{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: auto;
+        width: 325px;
+        align-items: center;
+    }
+    .prices-container__card3{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: auto;
+        width: 325px;
+        align-items: center;
     }
     //FORM
     .form-container{
@@ -738,3 +777,8 @@ main{
         align-self: center;
     }
 }
+
+
+//CAMBIAR BOTONES DE LAS CARDS A POSITION RELATIVE Y ABSOLUTE
+//CAMBIAR LAS IMAGENES DE LAS CARDS A POSITION REL Y ABS
+

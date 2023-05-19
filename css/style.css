@@ -96,7 +96,7 @@ main {
 }
 
 .laptop-img img {
-  max-width: 100%;
+  width: 100vw;
   max-height: 594px;
   margin-top: 60px;
 }
@@ -640,8 +640,35 @@ main {
   }
   .prices-container-cards {
     display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+  }
+  .prices-container__card1 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: auto;
+    width: 325px;
     align-items: center;
-    justify-content: center;
+  }
+  .prices-container__card2 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: auto;
+    width: 325px;
+    align-items: center;
+  }
+  .prices-container__card3 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: auto;
+    width: 325px;
+    align-items: center;
   }
   .form-container {
     display: flex;
