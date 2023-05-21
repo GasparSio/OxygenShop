@@ -8,6 +8,25 @@ body {
   min-width: 320px;
 }
 
+.progress-bar {
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  top: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.progress-bar__inner {
+  position: absolute;
+  height: 7px;
+  width: 0%;
+  background-color: #FB3B64;
+  color: #FFFFFF;
+}
+
 .header-section {
   width: 100%;
   height: 70px;
