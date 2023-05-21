@@ -21,13 +21,18 @@
                 <span>OXYGENShop</span>
             </div>
             <div class="header-section__icon">
-                <span><img src="./images/icon-menu.jpg" alt="Icon Menu" class=" icon-menu--big"></span>
+                <span><img src="./images/icon-menu.jpg" alt="Icon Menu" class="icon-menu--big"></span>
             </div>
-            <div class="header-section__subtitles">
-                <h4 class="section-why inactive">Why Us</h4>
-                <h4 class="section-benefits inactive">Benefits</h4>
-                <h4 class="section-prices inactive">Prices</h4>
-                <h4 class="section-contact inactive">Contact</h4>
+            <div class="header-section__subtitles inactive">
+                <a href="#section-why" class="section-why">Why Us</a>
+                <a href="#section-benefits" class="section-benefits">Benefits</a>
+                <a href="#section-prices" class="section-prices">Prices</a>
+                <a href="#section-contact" class="section-contact">Contact</a>
+                <!-- <h4 class="section-why">Why Us</h4> -->
+                <!-- <h4 class="section-benefits">Benefits</h4> -->
+                <!-- <h4 class="section-prices">Prices</h4> -->
+                <!-- <h4 class="section-contact">Contact</h4> -->
+                <img src="./images/x-title.png" alt="cross image" class="cross-title inactive">
             </div>    
         </div>
     </header>
@@ -35,7 +40,7 @@
 
 <!-- MAIN -->
     <main>
-        <section class="main-sell">
+        <section class="main-sell" id="section-why">
             <h1>Sell More!</h1>
             <p>Open shop on our platform and increase your sales</p>
             <button class="main-sell__button">Open your shop</button>
@@ -55,7 +60,7 @@
                 <img src="./images/icon-green.png" alt="icon info stadistics" class="icon-green">
             </div>
         </section>
-        <section class="card-container">
+        <section class="card-container" id="section-benefits">
             <div class="card-container__card card-1">
                 <div class="card-1__img">
                     <img src="./images/Macbook2-card.png" alt="Macbook image">
@@ -77,21 +82,19 @@
                     <img src="./images/card-blue-line.png" alt="blue-line" class="card-2__blue-line inactive">
                 </div>
             </div>
-            <div class="card-container__card-3">
-                <div class="card-container__card card-3">
+            <div class="card-container__card card-3">
+                <div class="card-3__text">
                         <h1>Increase recognition your brand!</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                         <img src="./images/card-green-line.png" alt="green line" class="card-3__blue-line inactive">
                 </div>
                 <div class="container-last-card-green">
-                    <div class="container-last-card__green"> 
-                        <img src="./images/Trumpet-card.png" alt="Trumpet image">
-                    </div>
+                    <img src="./images/Trumpet-card.png" alt="Trumpet image">
                 </div>
             </div>
         </section>
 
-        <section class="prices-container">
+        <section class="prices-container" id="section-prices">
             <h1>Pricing</h1>
             <div class="prices-container-cards">
                 <div class="prices-container__card1-button">
@@ -148,7 +151,7 @@
             </div>
         </section>
         
-        <section class="form-container">
+        <section class="form-container" id="section-contact">
             <div class="form-container__contact">
                 <h1>Any questions?</h1>
                 <h3>Leave your email address or call us!</h3>
@@ -158,7 +161,7 @@
                 </div>
             </div>
             <div class="form-container__personal-info">
-                <form action="/index.html" method="POST">
+                <form action="/index.html" method="POST" class="form-personal-info">
                     <div class="info-name">
                     <label for="name">NAME</label>
                     <br>
@@ -195,11 +198,11 @@
                 <span class="footer-rights">© 2022 OXYGEN, All Rights Reserved</span>
             </div>
             <div class="footer-container__media">
-                <span class="footer-twitter"><img src="./images/Twitter-icon.png" alt="Twitter icon"></span>
-                <span><img src="./images/Facebook-icon.png" alt="Facebook icon"></span>
+                <span class="footer-twitter"><a href="https://twitter.com/" target="_blank"><img src="./images/Twitter-icon.png" alt="Twitter icon"></a></span>
+                <span><a href="https://www.facebook.com/" target="_blank"><img src="./images/Facebook-icon.png" alt="Facebook icon"></a></span>
             </div>
     </footer>
 <!-- /FOTTER -->
-
+<script src="./script.js"></script>
 </body>
 </html>

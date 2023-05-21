@@ -26,6 +26,14 @@ body {
   font-size: 32px;
 }
 
+.header-section__title:hover {
+  cursor: pointer;
+}
+
+.header-section__icon img:hover {
+  cursor: pointer;
+}
+
 .section-why {
   font-family: "Open Sans";
   font-weight: 700;
@@ -33,6 +41,7 @@ body {
   color: #000000;
   line-height: 15px;
   letter-spacing: 3.28px;
+  text-decoration: none;
 }
 
 .section-benefits,
@@ -44,12 +53,17 @@ body {
   color: #A5A5A5;
   line-height: 15px;
   letter-spacing: 3.28px;
+  text-decoration: none;
 }
 
 .header-section__icon {
   display: inline-block;
   width: 44%;
   text-align: end;
+}
+
+.header-expand {
+  height: 200px;
 }
 
 main {
@@ -96,7 +110,7 @@ main {
 }
 
 .laptop-img img {
-  width: 100vw;
+  width: 100%;
   max-height: 594px;
   margin-top: 60px;
 }
@@ -130,6 +144,7 @@ main {
 .card-container .card-container__card {
   padding: 8px;
   width: 85%;
+  max-width: 650px;
   background-color: #FFFFFF;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
@@ -158,30 +173,31 @@ main {
 
 .card-3 {
   margin: 0 auto;
+  max-width: 650px;
+  padding: 8px 0;
+}
+
+.card-3__text {
+  padding: 8px;
 }
 
 .container-last-card-green {
   text-align: center;
-  background-color: #F7F7F7;
-}
-.container-last-card-green .container-last-card__green {
-  padding: 8px;
-  margin: 0 auto;
-  width: 85%;
-  border: 1px solid #E8E9ED;
-  border-radius: 5px;
   background-color: #55DFB4;
+  padding-top: 16px;
+  border-radius: 5px;
 }
 .container-last-card-green img {
+  padding-top: 45px;
   text-align: center;
-  width: 85%;
+  max-width: 85%;
   max-height: 250px;
 }
 
 .prices-container {
   text-align: center;
   background-color: #FFFFFF;
-  margin: 30px auto 0;
+  margin-top: 30px;
 }
 .prices-container h1 {
   font-family: Raleway;
@@ -193,6 +209,11 @@ main {
   padding-bottom: 30px;
 }
 
+.prices-container-cards {
+  margin: 0 auto;
+  max-width: 650px;
+}
+
 .prices-container__card1 {
   height: 250px;
   width: 85%;
@@ -201,6 +222,8 @@ main {
   border-radius: 18px;
   margin: 0 auto;
   display: inline-block;
+  transition-property: scale();
+  transition-duration: 0.5s;
 }
 
 .info-detail {
@@ -266,14 +289,15 @@ main {
 }
 
 .prices-container__card2 {
-  height: 290px;
-  width: 90%;
+  height: 250px;
+  width: 85%;
   background: #FFFFFF;
   border: 1px solid #07ACE6;
-  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
   border-radius: 18px;
   margin: 25px auto 0;
   display: inline-block;
+  transition-property: scale();
+  transition-duration: 0.5s;
 }
 
 .info-detail2 {
@@ -330,6 +354,8 @@ main {
   border-radius: 18px;
   margin: 25px auto 0;
   display: inline-block;
+  transition-property: scale();
+  transition-duration: 0.5s;
 }
 
 .info-detail3 {
@@ -376,6 +402,30 @@ main {
   line-height: 14.09px;
   color: #000000;
   display: block;
+}
+
+.prices-container__card1:hover {
+  box-shadow: 5px 10px 27px #FB3B64;
+}
+
+.prices-container__card1-button:hover {
+  transform: scale(1.01);
+}
+
+.prices-container__card2:hover {
+  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+}
+
+.prices-container__card2-button:hover {
+  transform: scale(1.01);
+}
+
+.prices-container__card3:hover {
+  box-shadow: 5px 10px 27px #55DFB4;
+}
+
+.prices-container__card3-button:hover {
+  transform: scale(1.01);
 }
 
 .form-container {
@@ -471,6 +521,10 @@ main {
   margin-left: 45px;
 }
 
+.form-personal-info input:focus {
+  outline: none;
+}
+
 .send-button {
   font-family: "Open Sans";
   font-weight: 700;
@@ -485,6 +539,10 @@ main {
   border-radius: 40px;
   height: 57px;
   border: none;
+}
+
+.send-button:hover {
+  cursor: pointer;
 }
 
 .footer-container {
@@ -581,9 +639,9 @@ main {
     align-items: center;
   }
   .card-1 {
-    height: 245px;
     display: flex;
     align-items: center;
+    height: 270px;
   }
   .card-1__img {
     width: 50%;
@@ -597,12 +655,13 @@ main {
   .card-1__red-line {
     display: block;
     margin: 30px 0;
+    width: 300px;
   }
   .card-2 {
     display: flex;
-    height: 245px;
     align-items: center;
     justify-content: space-evenly;
+    height: 270px;
   }
   .card-2__img {
     width: 40%;
@@ -615,21 +674,23 @@ main {
   .card-2__blue-line {
     display: block;
     margin: 30px 0;
-  }
-  .card-container__card-3 {
-    margin: 0 auto;
-    display: flex;
-    width: 85%;
-    height: 245px;
+    width: 280px;
   }
   .card-3 {
-    padding-left: 30px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+  .card-3__text {
+    padding-left: 20px;
     align-items: center;
   }
-  .container-last-card__green {
-    width: 89%;
-    height: 100%;
-    margin-left: 30px;
+  .card-3__blue-line {
+    width: 265px;
+  }
+  .container-last-card-green img {
+    padding-top: 60px;
   }
   .card-3__blue-line {
     display: block;
@@ -640,6 +701,7 @@ main {
   }
   .prices-container-cards {
     display: flex;
+    max-width: 100%;
     align-items: baseline;
     justify-content: space-evenly;
   }
@@ -648,7 +710,7 @@ main {
     flex-direction: column;
     padding-top: 20px;
     padding-bottom: 20px;
-    height: auto;
+    height: 357px;
     width: 325px;
     align-items: center;
   }
@@ -657,7 +719,7 @@ main {
     flex-direction: column;
     padding-top: 20px;
     padding-bottom: 20px;
-    height: auto;
+    height: 357px;
     width: 325px;
     align-items: center;
   }
@@ -666,7 +728,7 @@ main {
     flex-direction: column;
     padding-top: 20px;
     padding-bottom: 20px;
-    height: auto;
+    height: 357px;
     width: 325px;
     align-items: center;
   }
