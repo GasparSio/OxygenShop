@@ -12,7 +12,7 @@ body {
   position: sticky;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 99.5%;
   background-color: #FFFFFF;
   top: 0;
   padding: 5px;
@@ -34,8 +34,11 @@ body {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
 }
 
+.header-section__container {
+  display: flex;
+}
+
 .header-section__title {
-  display: inline-block;
   width: 48%;
 }
 .header-section__title span {
@@ -43,6 +46,10 @@ body {
   font-family: Raleway;
   font-weight: 400;
   font-size: 32px;
+}
+
+.header-section__icon {
+  display: none;
 }
 
 .header-section__title:hover {
@@ -53,16 +60,7 @@ body {
   cursor: pointer;
 }
 
-.section-why {
-  font-family: "Open Sans";
-  font-weight: 700;
-  font-size: 11px;
-  color: #000000;
-  line-height: 15px;
-  letter-spacing: 3.28px;
-  text-decoration: none;
-}
-
+.section-why,
 .section-benefits,
 .section-prices,
 .section-contact {
@@ -75,16 +73,45 @@ body {
   text-decoration: none;
 }
 
-.header-section__icon {
-  display: inline-block;
-  width: 44%;
-  text-align: end;
-}
-
 .header-expand {
   height: 200px;
 }
 
+.header-section-mob-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  height: 100px;
+  margin-top: 30px;
+  padding-left: 15px;
+}
+
+.header-section__subtitles {
+  display: flex;
+  width: 45%;
+  order: 2;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inactive {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header-section__subtitles {
+    display: none;
+  }
+  .header-section__icon {
+    display: flex;
+  }
+  .header-section__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 main {
   background-color: #F7F7F7;
 }
@@ -564,6 +591,34 @@ main {
   cursor: pointer;
 }
 
+.button-top-container {
+  display: flex;
+  background-color: #FFFFFF;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-return-top {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 11px;
+  text-align: center;
+  min-width: 180px;
+  margin-top: 40px;
+  margin-bottom: 35px;
+  color: #FFFFFF;
+  background-color: #08A6E4;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  border-radius: 40px;
+  height: 50px;
+  border: none;
+}
+
+.btn-return-top:hover {
+  cursor: pointer;
+}
+
 .footer-container {
   width: 100%;
   height: 89px;
@@ -607,45 +662,65 @@ main {
   margin-right: 12px;
 }
 
-.inactive {
-  display: none;
+.modal-overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 600px;
+  background-color: #F7F7F7;
+  margin: auto;
+  max-height: 70%;
+  border: 4px solid rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #000000;
+  height: 200px;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 11px;
+}
+.modal-content #submitBtn {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 9px;
+  color: #FFFFFF;
+  background-color: #08A6E4;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  border-radius: 3px;
+  border: none;
+  height: 20px;
+  width: 70px;
+}
+.modal-content #closeButton {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 11px;
+  background-color: #FB3B64;
+  border-radius: 3px;
+  border: none;
+  height: 20px;
+  width: 17px;
+  color: #F7F7F7;
 }
 
 @media only screen and (min-width: 1000px) {
-  .header-section__container {
-    position: relative;
-    display: flex;
-  }
-  .header-section__icon {
+  .header-section-mob-menu {
     display: none;
-    position: absolute;
   }
-  .header-section__title {
-    display: flex;
-    width: 45%;
-    order: 1;
-    padding-left: 60px;
-    justify-content: start;
-    align-items: center;
-  }
-  .header-section__subtitles {
-    display: flex;
-    width: 45%;
-    order: 2;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .section-why {
-    display: flex;
-  }
-  .section-benefits {
-    display: flex;
-  }
-  .section-prices {
-    display: flex;
-  }
-  .section-contact {
-    display: flex;
+  .header-expand {
+    height: 70px;
   }
   .main-stadistics {
     display: flexbox;

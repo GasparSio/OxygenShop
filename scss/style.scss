@@ -27,7 +27,7 @@ body {
     position: sticky;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 99.5%;
     background-color: $button-color-letter;
     top: 0;
     padding: 5px;
@@ -47,11 +47,11 @@ body {
      height: 70px;
      padding: 15px;
      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
-     
 }
-
+.header-section__container{
+    display: flex;
+}
 .header-section__title{
-    display: inline-block;
     width: 48%;
     span{
         color: $blue-color;
@@ -60,23 +60,17 @@ body {
         font-size: 32px;
     }
 }
+.header-section__icon{
+    display: none;
+}
 .header-section__title:hover{
     cursor: pointer;
 }
 .header-section__icon img:hover{
     cursor: pointer;
 }
-.section-why{
-    font: {
-        family: $opensans-font;
-        weight: $weight-700;
-        size: 11px;
-    }
-    color: $text-color;
-    line-height: 15px;
-    letter-spacing: 3.28px;
-    text-decoration: none;
-}
+
+.section-why,
 .section-benefits,
 .section-prices,
 .section-contact{
@@ -90,31 +84,46 @@ body {
     letter-spacing: 3.28px;
     text-decoration: none;
 }
-.header-section__icon{
-    display: inline-block;
-    width: 44%;
-    text-align: end;
-}
 
-//MODAL
+
+//MOBIL MENU
 .header-expand{
     height: 200px;
 }
-// .header-section__subtitles{
-//     display: flex;
-//     flex-direction: column;
-//     .section-why{
-//         font: {
-//             family: $opensans-font;
-//             weight: $weight-700;
-//             size: 11px;
-//         }
-//         color: $text-color;
-//         line-height: 15px;
-//         letter-spacing: 3.28px
-//     }
-// }
+.header-section-mob-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    height: 100px;
+    margin-top: 30px;
+    padding-left: 15px;
+}
+.header-section__subtitles{
+    display: flex;
+    width: 45%;
+    order: 2;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.inactive{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px){
+    .header-section__subtitles{
+        display: none;
+    }
+    .header-section__icon{
+        display: flex;
+    }
+    .header-section__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 
 
 //MAIN
@@ -252,18 +261,6 @@ main{
         max-height: 250px;
     }
 }
-
-// .card-1__mac-circle{
-//     position: relative;
-// }
-// .macbook-img{
-//     position: absolute;
-//     z-index: 1;
-// }
-// .img-circle{
-//     position: absolute;
-
-// }
 
 //PRICES CONTAINER
 .prices-container{
@@ -588,7 +585,6 @@ main{
     margin-top: 15px;
 }
 .consent-container__check{
-    // width: 15%;
     display: inline-block;
     vertical-align: top;
     input{
@@ -635,6 +631,34 @@ main{
 .send-button:hover{
     cursor: pointer;
 }
+//BUTTON - RETURN TO THE TOP
+.button-top-container{
+    display: flex;
+    background-color: $background-color-header;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.btn-return-top{
+    font : {
+        family: $opensans-font;
+        weight: $weight-700;
+        size: 11px;
+    }
+    text-align: center;
+    min-width: 180px;
+    margin-top: 40px;
+    margin-bottom: 35px;
+    color: $button-color-letter;
+    background-color: $blue-color;
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 40px;
+    height: 50px;
+    border: none;
+}
+.btn-return-top:hover{
+    cursor: pointer;
+}
 
 //FOOTER
 .footer-container{
@@ -675,48 +699,75 @@ main{
     margin-right: 12px;
    }
 }
-.inactive{
-    display: none;
+//MODAL NEWSLETTER
+.modal-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    width: 90%;
+    max-width: 600px;
+    background-color: #F7F7F7;
+    margin: auto;
+    max-height: 70%;
+    border: 4px solid rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: $text-color;
+    height: 200px;
+    font: {
+            family: $raleway-font;
+            weight: $weight-700;
+            size: 11px;
+    }
+    #submitBtn{
+        font : {
+            family: $opensans-font;
+            weight: $weight-400;
+            size: 9px;
+        }
+        color: $button-color-letter;
+        background-color: $blue-color;
+        box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+        border-radius: 3px;
+        border: none;
+        height: 20px;
+        width: 70px;
+    }
+    #closeButton{
+        font : {
+            family: $opensans-font;
+            weight: $weight-400;
+            size: 11px;
+        }
+        background-color: #FB3B64;
+        border-radius: 3px;
+        border: none;
+        height: 20px;
+        width: 17px;
+        color: #F7F7F7;
+    }
 }
 
 //MEDIA QUERY
 @media only screen and (min-width: 1000px) {
     //HEADER
-    .header-section__container{
-        position: relative;
-        display: flex;
-    }
-    .header-section__icon{
+    .header-section-mob-menu{
         display: none;
-        position: absolute;
     }
-    .header-section__title{
-        display: flex;
-        width: 45%;
-        order: 1;
-        padding-left: 60px;
-        justify-content: start;
-        align-items: center;
+    .header-expand{
+        height: 70px;
     }
-    .header-section__subtitles{
-        display: flex;
-        width: 45%;
-        order: 2;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .section-why{
-        display: flex;
-    }
-    .section-benefits{
-        display: flex;
-    }
-    .section-prices{
-        display: flex;
-    }
-    .section-contact{
-        display: flex;
-    }
+
     //MAIN STADISTICS
     .main-stadistics{
         display: flexbox;

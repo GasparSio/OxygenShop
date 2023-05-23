@@ -19,31 +19,33 @@
         <div class="progress-bar__inner"></div>
     </div>
     <!-- /PERCENTAGE SCROLLER -->
-<!-- HEADER -->
+    <!-- HEADER -->
     <header class="header-section">
         <div class="header-section__container">
             <div class="header-section__title">
                 <span>OXYGENShop</span>
             </div>
             <div class="header-section__icon">
-                <span><img src="./images/icon-menu.jpg" alt="Icon Menu" class="icon-menu--big"></span>
+                <span class="hamIcon"><img src="./images/icon-menu.jpg" alt="Icon Menu" class="icon-menu--big"></span>
+                <span class="crossIcon"><img src="./images/x-title.png" alt="Icon Menu" class="icon-menu--cross inactive"></span>
             </div>
-            <div class="header-section__subtitles inactive">
+            <div class="header-section__subtitles ">
                 <a href="#section-why" class="section-why">Why Us</a>
                 <a href="#section-benefits" class="section-benefits">Benefits</a>
                 <a href="#section-prices" class="section-prices">Prices</a>
                 <a href="#section-contact" class="section-contact">Contact</a>
-                <!-- <h4 class="section-why">Why Us</h4> -->
-                <!-- <h4 class="section-benefits">Benefits</h4> -->
-                <!-- <h4 class="section-prices">Prices</h4> -->
-                <!-- <h4 class="section-contact">Contact</h4> -->
-                <img src="./images/x-title.png" alt="cross image" class="cross-title inactive">
             </div>    
         </div>
+        <div class="header-section-mob-menu inactive">
+            <a href="#section-why" class="section-why">Why Us</a>
+            <a href="#section-benefits" class="section-benefits">Benefits</a>
+            <a href="#section-prices" class="section-prices">Prices</a>
+            <a href="#section-contact" class="section-contact">Contact</a>
+        </div>    
     </header>
-<!-- /HEADER -->
+    <!-- /HEADER -->
 
-<!-- MAIN -->
+    <!-- MAIN -->
     <main>
         <section class="main-sell" id="section-why">
             <h1>Sell More!</h1>
@@ -166,37 +168,54 @@
                 </div>
             </div>
             <div class="form-container__personal-info">
-                <form action="/index.html" method="POST" class="form-personal-info">
+                <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="form-personal-info" id="form">
                     <div class="info-name">
                     <label for="name">NAME</label>
                     <br>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" required>
                     <br>
                     <label for="email">EMAIL</label>
                     <br>
-                    <input type="text" name="email" id="email">
+                    <input type="text" name="email" id="email" required>
                     <br>
                     </div>
-                    
                     <div class="consent-container">
                         <div class="consent-container__check">
                             <label for="consent"></label>
-                            <input id="consent" name="checkbox" type="checkbox" value="consent">
+                            <input id="consent" name="consent" type="checkbox" value="consent" required>
                         </div>
                         <div class="consent-container__text">
                             <p>I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p>
                         </div>
                     </div>
+                    <div class="consent-container__button">
+                        <button class="send-button" type="submit">Send</button>
+                    </div>
                   </form>
-                  <div class="consent-container__button">
-                      <button class="send-button">Send</button>
-                  </div>
             </div>
         </section>
+        <!-- BUTTON RETURN TOP -->
+        <div class="button-top-container">
+            <button class="btn-return-top">Return to the top</button>
+        </div>
+        <!-- /BUTTON RETURN TOP -->
     </main>
-<!-- /MAIN -->
+    <!-- /MAIN -->
 
-<!-- FOTTER -->
+    <!-- MODAL NEWSLETTER-->
+        <div id="modal" class="modal-overlay" style="display:none">
+            <div class="modal-content">
+                <h2>Subscribe to our newsletter</h2>
+                <form action="https://jsonplaceholder.typicode.com/posts" method="POST" id="subscribeForm">
+                    <input type="email" id="emailInput" placeholder="email adress" required>
+                    <button id="submitBtn" type="submit">Suscribirse</button>
+                    <button id="closeButton" type="button">X</button>
+                </form>
+            </div>
+        </div>
+    <!-- /MODAL NEWSLETTER-->
+
+    <!-- FOTTER -->
     <footer class="footer-container">
             <div class="footer-container__rights">
                 <span class="footer-title">OXYGENShop</span>
@@ -207,7 +226,7 @@
                 <span><a href="https://www.facebook.com/" target="_blank"><img src="./images/Facebook-icon.png" alt="Facebook icon"></a></span>
             </div>
     </footer>
-<!-- /FOTTER -->
+    <!-- /FOTTER -->
 <script src="./script.js"></script>
 </body>
 </html>
