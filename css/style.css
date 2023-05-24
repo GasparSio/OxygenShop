@@ -23,7 +23,7 @@ body {
   position: absolute;
   height: 7px;
   width: 0%;
-  background-color: #FB3B64;
+  background-color: #08A6E4;
   color: #FFFFFF;
 }
 
@@ -474,6 +474,36 @@ main {
   transform: scale(1.01);
 }
 
+.section-currency {
+  margin-bottom: 25px;
+}
+.section-currency p {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+.section-currency button {
+  cursor: pointer;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+  font-size: 17px;
+  border: 1px solid #08a6e4;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+.section-currency .active {
+  background-color: rgba(7, 172, 230, 0.29);
+}
+
 .form-container {
   margin: 0 auto;
   background-color: #FFFFFF;
@@ -678,8 +708,8 @@ main {
   background-color: #F7F7F7;
   margin: auto;
   max-height: 70%;
-  border: 4px solid rgba(0, 0, 0, 0.5);
-  border-radius: 6px;
+  border: 4px solid #08A6E4;
+  border-radius: 8px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -691,10 +721,15 @@ main {
   font-weight: 700;
   font-size: 11px;
 }
+.modal-content h2 {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 22px;
+}
 .modal-content #submitBtn {
   font-family: "Open Sans";
-  font-weight: 400;
-  font-size: 9px;
+  font-weight: 600;
+  font-size: 10px;
   color: #FFFFFF;
   background-color: #08A6E4;
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
@@ -713,6 +748,16 @@ main {
   height: 20px;
   width: 17px;
   color: #F7F7F7;
+}
+
+#subscribeForm input {
+  border: none;
+  border-bottom: 1px solid #95989A;
+  width: 190px;
+}
+
+#subscribeForm input:focus {
+  outline: none;
 }
 
 @media only screen and (min-width: 1000px) {

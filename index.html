@@ -103,12 +103,18 @@
 
         <section class="prices-container" id="section-prices">
             <h1>Pricing</h1>
+            <div class="section-currency">
+                <p>Select your currency</p>
+                <button id="usd" class="section-currency__dolar active">$</button>
+                <button id="euro" class="section-currency__euro">€</button>
+                <button id="pound" class="section-currency__pound">£</button>
+            </div>
             <div class="prices-container-cards">
                 <div class="prices-container__card1-button">
                     <div class="prices-container__card1">
                         <div class="price-detail">
                             <h2>Basic</h2>
-                            <span>$0</span>
+                            <span id="price-number__card1">$ 0</span>
                         </div>
                         <div class="info-detail">
                             <span><img src="./images/Checkbox.png" alt="Checkbox Image"> 100 MB HDD</span>
@@ -124,7 +130,7 @@
                     <div class="prices-container__card2">
                         <div class="price-detail2">
                             <h2>Professional</h2>
-                            <span class="price-detail2__number">$25</span>
+                            <span class="price-detail2__number" id="price-number__card2">$ 25</span>
                             <span class="price-detail2__offer">Limited offer</span>
                         </div>
                         <div class="info-detail2">
@@ -142,7 +148,7 @@
                     <div class="prices-container__card3">
                         <div class="price-detail3">
                             <h2>Premium</h2>
-                            <span class="price-detail3__number">$60</span>
+                            <span class="price-detail3__number" id="price-number__card3">$ 60</span>
                             <span class="price-detail3__offer">Limited offer</span>
                         </div>
                         <div class="info-detail3">
@@ -207,7 +213,7 @@
             <div class="modal-content">
                 <h2>Subscribe to our newsletter</h2>
                 <form action="https://jsonplaceholder.typicode.com/posts" method="POST" id="subscribeForm">
-                    <input type="email" id="emailInput" placeholder="email adress" required>
+                    <input type="email" id="emailInputNews" placeholder="email adress" name="emailInputNews" required>
                     <button id="submitBtn" type="submit">Suscribirse</button>
                     <button id="closeButton" type="button">X</button>
                 </form>

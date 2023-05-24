@@ -37,7 +37,7 @@ body {
     position: absolute;
     height: 7px;
     width: 0%;
-    background-color: $red-color;
+    background-color: $blue-color;
     color: $button-color-letter;
 }
 
@@ -506,7 +506,40 @@ main{
 .prices-container__card3-button:hover{
     transform: scale(1.01);
 }
+//CURRENCY SELECTOR
+.section-currency{
+    margin-bottom: 25px;
+    p{
+        font: {
+            family: $opensans-font;
+            weight: $weight-600;
+            size: 18px;
+    }
+    line-height: 22px;
+    color: $text-color;
+    margin-top: 4px;
+    margin-bottom: 20px;  
+    }
+    button{
+        cursor: pointer;
+        height: 40px;
+        line-height: 20px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-right: 5px;
+        border-radius: 10px;
+        font-size: 17px;
+        border: 1px solid #08a6e4;
+        text-align: center;
+        background-color: $background-color-header;
+    }
+}
+.section-currency .active{
+    background-color: rgba(7, 172, 230, 0.29);
+}
 
+
+//FORM
 .form-container{
     margin: 0 auto;
     background-color: $background-color-header;
@@ -715,8 +748,8 @@ main{
     background-color: #F7F7F7;
     margin: auto;
     max-height: 70%;
-    border: 4px solid rgba(0, 0, 0, 0.5);
-    border-radius: 6px;
+    border: 4px solid $blue-color;
+    border-radius: 8px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -724,6 +757,13 @@ main{
     align-items: center;
     color: $text-color;
     height: 200px;
+    h2{
+    font: {
+        family: $raleway-font;
+        weight: $weight-700;
+        size: 22px;
+    }
+    }
     font: {
             family: $raleway-font;
             weight: $weight-700;
@@ -732,8 +772,8 @@ main{
     #submitBtn{
         font : {
             family: $opensans-font;
-            weight: $weight-400;
-            size: 9px;
+            weight: $weight-600;
+            size: 10px;
         }
         color: $button-color-letter;
         background-color: $blue-color;
@@ -757,7 +797,14 @@ main{
         color: #F7F7F7;
     }
 }
-
+#subscribeForm input{
+        border: none;
+        border-bottom: 1px solid #95989A;
+        width: 190px;
+}
+#subscribeForm input:focus{
+    outline: none;
+}
 //MEDIA QUERY
 @media only screen and (min-width: 1000px) {
     //HEADER
