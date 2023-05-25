@@ -77,7 +77,6 @@ fetch(url, {
         }
     })
     .then((json) => {
-        console.log(json);
     })
     .catch((error) => {
         console.log(error);
@@ -360,3 +359,74 @@ btnPound.addEventListener('click', () => {
     btnEuro.classList.remove('active');
     exchangeCurrency("gbp.json");
 })
+
+
+
+//SLIDER IMAGES
+class Slider{
+  constructor(id){
+    this.id = document.getElementById('slider');
+    this.contador = 0;
+    this.images = [
+      '/images/slider-person1.jpg',
+      '/images/slider-table.jpg',
+      '/images/slider-computer.jpg',
+      'images/slider-person.jpg',
+      'images/slider-phone.jpg'
+    ];
+    this.rightBtn = document.querySelector('.right-arrow');
+    this.leftBtn = document.querySelector('.left-arrow');
+    this.buttonTag = document.querySelector('.button-container');
+  }
+  loadFirstImg(){
+    document.addEventListener('DOMContentLoaded', () => {
+      document.imageSection.src = this.images[0];
+      console.log('cargo la primera');
+    })  
+  }
+  moveRight(){
+    this.rightBtn.addEventListener('click', () => {
+      this.contador++;
+      if(this.contador > this.images.length -1){
+        this.contador = 0;
+      }
+      document.imageSection.src = this.images[this.contador];
+    })
+  }
+  moveLeft(){
+    this.leftBtn.addEventListener('click', () => {
+      this.contador--;
+      if(this.contador < 0){
+        this.contador = this.images.length -1;
+      }
+      document.imageSection.src = this.images[this.contador];
+    })
+    console.log('click izquierdo');
+  }
+  buttonImg(){
+    this.buttonTag.addEventListener('click', (e) => {
+      if(e.target.id == 1){
+        document.imageSection.src = this.images[0];
+        this.contador = 0;
+      }else if(e.target.id == 2){
+        document.imageSection.src = this.images[1];
+        this.contador = 1;
+      }else if(e.target.id == 3){
+        document.imageSection.src = this.images[2];
+        this.contador = 2;
+      }else if(e.target.id == 4){
+        document.imageSection.src = this.images[3];
+        this.contador = 3;
+      }else if(e.target.id == 5){
+        document.imageSection.src = this.images[4];
+        this.contador = 4;
+      }
+      })
+  }
+}
+
+const sliderClass = new Slider('slider');
+sliderClass.loadFirstImg();
+sliderClass.moveRight();
+sliderClass.moveLeft();
+sliderClass.buttonImg();
