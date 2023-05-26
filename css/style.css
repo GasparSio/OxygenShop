@@ -149,6 +149,7 @@ main {
   border-radius: 40px;
   height: 67px;
   border: none;
+  cursor: pointer;
 }
 
 .laptop-img {
@@ -310,6 +311,7 @@ main {
 }
 
 .card-button {
+  cursor: pointer;
   margin-top: -50px;
   color: #FFFFFF;
   width: 150px;
@@ -522,7 +524,7 @@ main {
   position: absolute;
   top: 50%;
   left: 5px;
-  width: 5%;
+  width: 4%;
   transition-property: scale();
   transition-duration: 0.5s;
 }
@@ -541,9 +543,9 @@ main {
   align-items: center;
   position: absolute;
   border-radius: 30px;
-  width: 5%;
+  width: 4%;
   right: 5px;
-  bottom: 42%;
+  top: 50%;
   transition-property: scale();
   transition-duration: 0.5s;
 }
@@ -562,7 +564,30 @@ main {
 }
 .slider-screen img {
   width: 100%;
+}
+
+.button-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 16px;
+  left: 46%;
+}
+
+.button-dot__1,
+.button-dot__2,
+.button-dot__3,
+.button-dot__4,
+.button-dot__5 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(8, 6, 6);
   cursor: pointer;
+}
+
+.slider-button-dot-white {
+  background-color: #FFFFFF;
 }
 
 .form-container {
@@ -734,6 +759,7 @@ main {
   font-size: 26px;
   text-align: start;
   margin-left: 3px;
+  cursor: pointer;
 }
 
 .footer-rights {

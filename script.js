@@ -1,8 +1,9 @@
 //FORM VALIDATION & EMAIL SUBMIT
-const nameForm = document.getElementById('name')
-const emailForm = document.getElementById('email')
-const form = document.getElementById('form')
-const inputs = document.querySelectorAll('#form input')
+const nameForm = document.getElementById('name');
+const emailForm = document.getElementById('email');
+const form = document.getElementById('form');
+const inputs = document.querySelectorAll('#form input');
+
 
 const expresiones = {
     nameUsuario: /^[a-zA-Z0-9\_\-]{2,100}$/,
@@ -56,11 +57,9 @@ form.addEventListener('submit', (event) => {
 const url = 'https://jsonplaceholder.typicode.com/posts';
 const nameValue = nameForm.value;
 const emailValue = emailForm.value;
-// const emailSuscriptor = emailInput.value;
 const data = {
     name: nameValue,
     email: emailValue, 
-    // emailSuscriptor: emailSuscriptor
 }
 fetch(url, {
     method: 'POST',
@@ -208,6 +207,64 @@ if (scrollPosition > (pageHeight * 0.25)) {
 });
 
 
+//VALIDATE EMAIL MODAL NEWSLETTER
+const emailNewsLetter = document.getElementById('emailInputNews');
+const expresionesNews = {
+  email: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+}
+const camposNews = {
+  email: false
+}
+const validateFormNews = (event) => {
+  if(expresionesNews.email.test(emailNewsLetter.value)){
+    emailNewsLetter.style.borderColor = '#55DFB4';
+    camposNews.email = true;
+  }else{
+    emailNewsLetter.style.borderColor = '#EB476E';
+    camposNews.email = false;
+  }
+}
+emailNewsLetter.addEventListener('keyup', validateFormNews);
+emailNewsLetter.addEventListener('blur', validateFormNews);
+
+subscribeForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  if(camposNews.email){
+    subscribeForm.reset();
+    setTimeout(()=>{
+      closeModal();
+    }, 1000);
+  }
+})
+
+//ENVIAR A UN SERVIDOR JSON LOS DATOS DEL FORMULARIO
+const urlNews = 'https://jsonplaceholder.typicode.com/posts';
+const emailSuscriptorValue = emailNewsLetter.value;
+const data1 = {
+  emailSuscriptor: emailSuscriptorValue
+}
+fetch(urlNews, {
+  method: 'POST',
+  body: JSON.stringify(data1),
+  headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+  }
+})
+  .then(response => {
+      if(response.ok){
+          return response.json();
+      }else{
+          throw new Error ('Request failed')
+      }
+  })
+  .then((json) => {
+  })
+  .catch((error) => {
+      console.log(error);
+  });  
+
+
 //CURRENCY SELECTOR
 const btnUsd = document.querySelector('.section-currency__dolar');
 const btnEuro = document.querySelector('.section-currency__euro');
@@ -245,7 +302,7 @@ const priceNumCard3 = document.getElementById("price-number__card3");
 
   
 async function exchangeCurrency (currency) {
-    // Getting which is the currently displayed currency in the HTML
+  //Which is the current currency
   let currentCurrency = '';
   if (priceNumCard1.innerText.includes("$")) {
     currentCurrency = "usd";
@@ -339,6 +396,7 @@ async function exchangeCurrency (currency) {
     }
   }
 }
+
 //CLICK TO THE BUTTONS
 btnEuro.addEventListener('click', () => {
     btnEuro.classList.add('active');
@@ -361,7 +419,6 @@ btnPound.addEventListener('click', () => {
 })
 
 
-
 //SLIDER IMAGES
 class Slider{
   constructor(id){
@@ -377,11 +434,16 @@ class Slider{
     this.rightBtn = document.querySelector('.right-arrow');
     this.leftBtn = document.querySelector('.left-arrow');
     this.buttonTag = document.querySelector('.button-container');
+    this.buttonDot1 = document.getElementById('1');
+    this.buttonDot2 = document.querySelector('.button-dot__2');
+    this.buttonDot3 = document.querySelector('.button-dot__3');
+    this.buttonDot4 = document.querySelector('.button-dot__4');
+    this.buttonDot5 = document.querySelector('.button-dot__5');
   }
   loadFirstImg(){
     document.addEventListener('DOMContentLoaded', () => {
       document.imageSection.src = this.images[0];
-      console.log('cargo la primera');
+      this.buttonDot1.classList.add('slider-button-dot-white');
     })  
   }
   moveRight(){
@@ -391,6 +453,17 @@ class Slider{
         this.contador = 0;
       }
       document.imageSection.src = this.images[this.contador];
+      if(this.contador == 0){
+        this.addFirstBtn();
+      }else if(this.contador == 1){
+        this.addSecBtn();
+      }else if(this.contador == 2){
+        this.addThirBtn();
+      }else if(this.contador == 3){
+        this.addFortBtn();
+      }else if(this.contador == 4){
+        this.addFivBtn();
+      }
     })
   }
   moveLeft(){
@@ -400,28 +473,79 @@ class Slider{
         this.contador = this.images.length -1;
       }
       document.imageSection.src = this.images[this.contador];
+      if(this.contador == 0){
+        this.addFirstBtn();
+      }else if(this.contador == 1){
+        this.addSecBtn();
+      }else if(this.contador == 2){
+        this.addThirBtn();
+      }else if(this.contador == 3){
+        this.addFortBtn();
+      }else if(this.contador == 4){
+        this.addFivBtn();
+      }
     })
-    console.log('click izquierdo');
   }
   buttonImg(){
     this.buttonTag.addEventListener('click', (e) => {
       if(e.target.id == 1){
         document.imageSection.src = this.images[0];
         this.contador = 0;
+        this.addFirstBtn();
       }else if(e.target.id == 2){
         document.imageSection.src = this.images[1];
         this.contador = 1;
+        this.addSecBtn();
+
       }else if(e.target.id == 3){
         document.imageSection.src = this.images[2];
         this.contador = 2;
+        this.addThirBtn()
       }else if(e.target.id == 4){
         document.imageSection.src = this.images[3];
         this.contador = 3;
+        this.addFortBtn();
       }else if(e.target.id == 5){
         document.imageSection.src = this.images[4];
         this.contador = 4;
+        this.addFivBtn()
       }
       })
+  }
+  addFirstBtn(){
+    this.buttonDot1.classList.add('slider-button-dot-white');
+    this.buttonDot2.classList.remove('slider-button-dot-white');
+    this.buttonDot3.classList.remove('slider-button-dot-white');
+    this.buttonDot4.classList.remove('slider-button-dot-white');
+    this.buttonDot5.classList.remove('slider-button-dot-white');
+  }
+  addSecBtn(){
+    this.buttonDot1.classList.remove('slider-button-dot-white');
+    this.buttonDot2.classList.add('slider-button-dot-white');
+    this.buttonDot3.classList.remove('slider-button-dot-white');
+    this.buttonDot4.classList.remove('slider-button-dot-white');
+    this.buttonDot5.classList.remove('slider-button-dot-white');
+  }
+  addThirBtn(){
+    this.buttonDot1.classList.remove('slider-button-dot-white');
+    this.buttonDot2.classList.remove('slider-button-dot-white');
+    this.buttonDot3.classList.add('slider-button-dot-white');
+    this.buttonDot4.classList.remove('slider-button-dot-white');
+    this.buttonDot5.classList.remove('slider-button-dot-white');
+  }
+  addFortBtn(){
+    this.buttonDot1.classList.remove('slider-button-dot-white');
+    this.buttonDot2.classList.remove('slider-button-dot-white');
+    this.buttonDot3.classList.remove('slider-button-dot-white');
+    this.buttonDot4.classList.add('slider-button-dot-white');
+    this.buttonDot5.classList.remove('slider-button-dot-white');
+  }
+  addFivBtn(){
+    this.buttonDot1.classList.remove('slider-button-dot-white');
+    this.buttonDot2.classList.remove('slider-button-dot-white');
+    this.buttonDot3.classList.remove('slider-button-dot-white');
+    this.buttonDot4.classList.remove('slider-button-dot-white');
+    this.buttonDot5.classList.add('slider-button-dot-white');
   }
 }
 
