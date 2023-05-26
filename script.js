@@ -425,11 +425,11 @@ class Slider{
     this.id = document.getElementById('slider');
     this.contador = 0;
     this.images = [
+      'images/slider-phone.jpg',
+      'images/slider-person.jpg',
       '/images/slider-person1.jpg',
       '/images/slider-table.jpg',
-      '/images/slider-computer.jpg',
-      'images/slider-person.jpg',
-      'images/slider-phone.jpg'
+      '/images/slider-computer.jpg'
     ];
     this.rightBtn = document.querySelector('.right-arrow');
     this.leftBtn = document.querySelector('.left-arrow');
