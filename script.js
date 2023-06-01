@@ -328,7 +328,7 @@ async function exchangeCurrency (currency) {
           (
             parseFloat(price.innerText.replace(/[^0-9\.-]+/g, "")) *
             eurToUsd.usd
-          ).toFixed(2);
+          ).toFixed(0);
       });
       // Change from GBP to USD
     } else if (currentCurrency == "gbp") {
@@ -339,7 +339,7 @@ async function exchangeCurrency (currency) {
           (
             parseFloat(price.innerText.replace(/[^0-9\.-]+/g, "")) *
             gbpToUsd.usd
-          ).toFixed(2);
+          ).toFixed(0);
       });
     }
 
@@ -350,22 +350,20 @@ async function exchangeCurrency (currency) {
       const usdToEur = await getExchangeRate("usd/eur.json");
       pricesToChange.forEach((price) => {
         price.innerText =
-          "€ " +
-          (
-            parseFloat(price.innerText.replace(/[^0-9\.-]+/g, "")) *
-            usdToEur.eur
-          ).toFixed(2);
+        (
+          parseFloat(price.innerText.replace(/[^0-9\.-]+/g, "")) *
+          usdToEur.eur
+        ).toFixed(0) + " €";
       });
       // Change from GBP to EUR
     } else if (currentCurrency == "gbp") {
       const gbpToEur = await getExchangeRate("gbp/eur.json");
       pricesToChange.forEach((price) => {
         price.innerText =
-          "€ " +
           (
             parseFloat(price.innerText.replace(/[^0-9\.-]+/g, "")) *
             gbpToEur.eur
-          ).toFixed(2);
+          ).toFixed(0) +" €";
       });
     }
 
@@ -380,7 +378,7 @@ async function exchangeCurrency (currency) {
           (
             parseFloat(price.innerText.replace(/[^0-9\.-]+/g, "")) *
             usdToGbp.gbp
-          ).toFixed(2);
+          ).toFixed(0);
       });
       // Change from EUR to GBP
     } else if (currentCurrency == "eur") {
@@ -391,7 +389,7 @@ async function exchangeCurrency (currency) {
           (
             parseFloat(price.innerText.replace(/[^0-9\.-]+/g, "")) *
             eurToGbp.gbp
-          ).toFixed(2);
+          ).toFixed(0);
       });
     }
   }
