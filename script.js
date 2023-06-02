@@ -49,6 +49,7 @@ form.addEventListener('submit', (event) => {
 
     if(campos.nameUsuario && campos.email && consentCheck.checked){//.checked comprueba que este marcado
         form.reset();
+        location.reload();
     }
     
 })

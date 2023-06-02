@@ -9,7 +9,7 @@ body {
 }
 
 .progress-bar {
-  z-index: 1;
+  z-index: 2;
   position: sticky;
   left: 0;
   top: 0;
@@ -262,6 +262,7 @@ main {
 .prices-container-cards {
   margin: 0 auto;
   max-width: 650px;
+  padding-bottom: 70px;
 }
 
 .prices-container__card1 {
@@ -273,7 +274,7 @@ main {
   margin: 0 auto;
   display: inline-block;
   transition-property: scale();
-  transition-duration: 0.5s;
+  transition-duration: 1.5s;
 }
 
 .info-detail {
@@ -348,7 +349,7 @@ main {
   margin: 25px auto 0;
   display: inline-block;
   transition-property: scale();
-  transition-duration: 0.5s;
+  transition-duration: 1.5s;
 }
 
 .info-detail2 {
@@ -406,7 +407,7 @@ main {
   margin: 25px auto 0;
   display: inline-block;
   transition-property: scale();
-  transition-duration: 0.5s;
+  transition-duration: 1.5s;
 }
 
 .info-detail3 {
