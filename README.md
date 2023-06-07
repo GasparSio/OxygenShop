@@ -14,6 +14,6 @@
 
 
 ### You can visit the website by clicking the link below
-[OXYGENSHop](https://gasparsio.github.io/OxygenShop/)
+[OXYGENShop](https://gasparsio.github.io/OxygenShop/)
 
 
