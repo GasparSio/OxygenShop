@@ -198,4 +198,3 @@ fetch(urlNews, {
   .catch((error) => {
       console.log(error);
   });  
-

@@ -32,6 +32,14 @@ function scrollToTop() {
     }
   }
 
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 0) {
+        btnRetTop.style.display = 'block';
+    } else {
+        btnRetTop.style.display = 'none';
+    }
+  });
+
 
 //CLICK HAMBURG MENU
 const headerSecIcon = document.querySelector('.header-section__icon')

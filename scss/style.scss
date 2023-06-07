@@ -749,29 +749,18 @@ main{
     cursor: pointer;
 }
 //BUTTON - RETURN TO THE TOP
-.button-top-container{
-    display: flex;
-    background-color: $background-color-header;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
+
 .btn-return-top{
-    font : {
-        family: $opensans-font;
-        weight: $weight-700;
-        size: 11px;
-    }
-    text-align: center;
-    min-width: 180px;
-    margin-top: 40px;
-    margin-bottom: 35px;
-    color: $button-color-letter;
-    background-color: $blue-color;
-    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
-    border-radius: 40px;
-    height: 50px;
+    display: none;
+    position: fixed;
     border: none;
+    border-radius: 50%;
+    right: 2px;
+    bottom: 90px;
+    z-index: 10;
+}
+.btn-return-top img{
+    border-radius: 50%;
 }
 .btn-return-top:hover{
     cursor: pointer;
