@@ -173,6 +173,10 @@ main{
         height: 67px;
         border: none;
         cursor: pointer;
+        text-decoration: none;
+    }
+    .main-sell__button:hover {
+        transform: scale(1.005); 
     }
 }
 .laptop-img{
